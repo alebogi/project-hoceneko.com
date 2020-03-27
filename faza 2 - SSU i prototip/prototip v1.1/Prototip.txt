@@ -1,0 +1,4 @@
+Prototip projekta, kao dopuna uz SSU.
+=======================================
+- Dodat prikaz opcije za uklanjanje komentara , koja je dostupna administratoru
+- Dodata stranica za prikaz scenarija neuspesnog kontaktiranja podrske
