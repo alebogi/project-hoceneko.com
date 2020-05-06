@@ -28,6 +28,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `komentar`
 --
 
+CREATE DATABASE IF NOT EXISTS `hoceneko` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `hoceneko`;
+
 DROP TABLE IF EXISTS `komentar`;
 CREATE TABLE IF NOT EXISTS `komentar` (
   `idKom` int(11) NOT NULL,
