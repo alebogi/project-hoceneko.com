@@ -14,12 +14,9 @@ class KorisnikModel extends Model
         protected $returnType = 'object';
         protected $allowedFields = ['korisnicko_ime', 'lozinka', 'ime', 'prezime', 'pol', 'e_mail' , 'datum_rodjenja', 'tip' , 'ocena' , 'opis', 'profilna_slika'];
         
-//        public function pretraga($tekst) {
-//            return $this->like('naslov', $tekst)
-//                    ->orLike('sadrzaj', $tekst)->findAll();      
-//        }
-//        
-//        public function dohvatiVestiAutora($autor) {
-//            return $this->where('autor', $autor)->findAll();      
-//        }
+        
+        public function dohvatiId($korisnik){
+            $result = $this->where('korisnicko_ime',$korisnik)->first();
+            return $result->idKor;
+        }
 }
