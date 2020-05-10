@@ -83,6 +83,10 @@ use App\Models\KorisnikModel;
                           ?>
                     </span>
                 </div>
+				<div class="row likeWrapper">
+                            <button type="button" name="like" class="likebtn"> Like </button>
+                            <button type="button" name="dislike" class="dislakebtn"> Dislike</button>
+                 </div>
                 <!-- kraj pregleda profila-->
 
                  
