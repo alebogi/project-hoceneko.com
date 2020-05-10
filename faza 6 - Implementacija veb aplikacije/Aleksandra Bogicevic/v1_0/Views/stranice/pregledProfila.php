@@ -16,7 +16,17 @@ use App\Models\KorisnikModel;
                 <div class="row">
                     <div class="col-sm-4 col-md-4 col-lg-4">
                         <div class="row ">
-                            <img src="/img/glava.jpg" id="profilnaSlika"> <!-- DOHVATITI SLIKU IZ BAZE -->
+                            <?php 
+                                $korisnikModel = new KorisnikModel();
+                                $korisnikIzBaze = $korisnikModel->find($korisnik->idKor);
+                                
+                                if (empty($korisnikIzBaze->profilna_slika)){
+                                    $filepath="/uploads/glava.jpg"; 
+                                }else{
+                                   $filepath="/uploads/"."$korisnik->korisnicko_ime"."_profilna.jpg";
+                                }
+                            ?>
+                            <img src="<?php echo $filepath; ?>" id="profilnaSlika"> 
                         </div>
                        <div class="row justify-content-center">
                             <!-- ovo ima samo na strani moj profil -->
@@ -83,10 +93,6 @@ use App\Models\KorisnikModel;
                           ?>
                     </span>
                 </div>
-				<div class="row likeWrapper">
-                            <button type="button" name="like" class="likebtn"> Like </button>
-                            <button type="button" name="dislike" class="dislakebtn"> Dislike</button>
-                 </div>
                 <!-- kraj pregleda profila-->
 
                  

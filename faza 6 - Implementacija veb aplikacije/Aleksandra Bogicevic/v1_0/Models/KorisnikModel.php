@@ -55,4 +55,22 @@ class KorisnikModel extends Model
     public function dohvatiOcenu($idKor){
         return $this->find($idKor)->ocena;
     }
+    
+    
+    /**
+     * Metoda koja sluzi kao pomoc za metodu Korisnik/promenaSlike
+     * Update-uje tabelu u bazi 
+     * 
+     * @author Aleksandra Bogicevic 0390/17
+     */
+    public function update_photo($data){
+        $db      = \Config\Database::connect();
+        $builder = $db->table('korisnik');
+        
+        $builder->set('profilna_slika',$data['slika']);
+        $builder->where('korisnicko_ime',$data['korisnicko_ime']);
+        return $builder->update(); 
+
+        
+    }
 }

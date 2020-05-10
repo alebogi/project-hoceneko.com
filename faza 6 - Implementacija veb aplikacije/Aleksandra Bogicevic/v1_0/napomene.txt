@@ -1,0 +1,6 @@
+pri registraciji/promeni profilne, slike se smestaju u public/uploads pod imenkom korisnickoIme_profilna.jpg
+
+Ako zelite da ubacite slike -> imate u folderu slikeZaTestiranje
+
+Uvezan je pregled profila preko pocetne stranice kao i iz pojedinacne objave. Treba jos uvezati iz komentara. Lepo je odradjeno preusmeravanje na mojProfi.
+

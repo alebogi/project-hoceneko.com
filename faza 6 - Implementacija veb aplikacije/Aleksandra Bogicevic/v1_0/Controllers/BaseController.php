@@ -206,7 +206,7 @@ class BaseController extends Controller
      public function profil($id){
         $korisnikModel=new KorisnikModel();
         $korisnik=$korisnikModel->find($id);
-        $this->prikaz('pregledProfila', ['korisnik'=>$korisnik]);
+        $this->prikazProfila('pregledProfila', ['korisnik'=>$korisnik]);
     }
     
      /*
@@ -217,9 +217,9 @@ class BaseController extends Controller
      * 
      */
      public function podrska(){
-         $korisnik_id = $this->session->get('korisnik_id');
+         $korisnik = $this->session->get('korisnik');
          
-         if($korisnik_id == null){
+         if($korisnik == null){
               $this->prikaz('podrskaZaGosta' , []);
               return;
          }

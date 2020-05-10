@@ -20,8 +20,16 @@ else {
 foreach ($objave as $objava) {
     $korisnikModel = new KorisnikModel();
     $korisnik = $korisnikModel->find($objava->idKor);
-    echo "<tr><td>{$objava->naziv}</td><td>{$korisnik->korisnicko_ime}</td><td>{$objava->br_potrebnih_clanova}</td><td>{$objava->br_prijavljenih_clanova}</td>";
+    echo "<tr><td>{$objava->naziv}</td>";
+    
+    
+    
+    echo "<td>".anchor("$controller/profil/{$korisnik->idKor}", "$korisnik->korisnicko_ime")."</td>";
+    
+    echo"<td>{$objava->br_potrebnih_clanova}</td><td>{$objava->br_prijavljenih_clanova}</td>";
     echo "<td>".anchor("$controller/objava/{$objava->idObj}", "Link")."</td></tr>";
+    
+    //echo "<td>{$korisnik->korisnicko_ime}</td>";
 }
 }
 ?>

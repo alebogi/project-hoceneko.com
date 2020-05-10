@@ -1,28 +1,27 @@
-<?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br>"; ?>
-
-
  <div class="col-sm-7 col-md-7 col-lg-7 main">
-     
-     
-     <?php echo form_open("Gost/loginSubmit","method=post"); ?>
-                    <!-- <form class="podrskaForma"  method="post"> -->
-                        <label for="temaPodrska">
-                            Korisnicko ime: 
-                        </label>
-                        <br/>
-                        <input type="text" placeholder="username..." rows="1"  name="username" required="yes">
-                        <br/> <br/>
-                        <label for="porukaPodrska">
-                            Sifra: 
-                        </label>
-                        <br/>
-                        <textarea placeholder="sifra..." rows="1"  name="pass" required="yes"></textarea>
-                        <br/>
-                        <br/>
-                        <button type="submit" class="btn">Log in</button>
-                    <!-- </form> -->
-                    <?php echo form_close(); ?>
+       <form name="loginform" action="<?= site_url("Gost/loginSubmit") ?>" method="post">
+<table>
+    <tr>
+        <?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br><br>"; ?>
+        <td>Korisnicko ime:</td>
+        <td><input type="text" name="korisnicko_ime" 
+                   value="<?= set_value('korisnicko_ime') ?>"/></td>
+        <td><font color='red'>
+            <?php if(!empty($errors['korisnicko_ime'])) 
+                echo $errors['korisnicko_ime'];
+            ?></font></td>
+    </tr>
+    <tr>
+        <td>Lozinka:</td>
+        <td><input type="password" name="lozinka"/></td>
+        <td><font color='red'>
+             <?php if(!empty($errors['lozinka'])) 
+                echo $errors['lozinka'];
+            ?></font></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Log in"/></td>
+    </tr>
+</table>
+           </form>
  </div>
-
-
-            

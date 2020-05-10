@@ -16,10 +16,29 @@ use App\Models\KorisnikModel;
                 <div class="row">
                     <div class="col-sm-4 col-md-4 col-lg-4">
                         <div class="row ">
-                            <img src="/img/glava.jpg" id="profilnaSlika"> <!-- DOHVATITI SLIKU IZ BAZE -->
+                            <?php 
+                                $korisnikModel = new KorisnikModel();
+                                $korisnikIzBaze = $korisnikModel->find($korisnik->idKor);
+                                
+                                if (empty($korisnikIzBaze->profilna_slika)){
+                                    $filepath="/uploads/glava.jpg"; 
+                                }else{
+                                   $filepath="/uploads/"."$korisnik->korisnicko_ime"."_profilna.jpg";
+                                }
+                            ?>
+                            <img src="<?php echo $filepath; ?>" id="profilnaSlika"> 
                         </div>
                        <div class="row justify-content-center">
-                            <button type="button" class="btn">Promeni sliku</button>
+                        <?php 
+                            echo form_open_multipart("Korisnik/promenaSlike","method=post");
+                            echo "Izaberi sliku:<br>";
+                            echo "<input type='file' name='profilna_slika' />";
+                        ?>
+                            <button type="submit" class="btn">Promeni sliku</button>
+                            <?php if(isset($poruka)) echo "<font color='red'>$poruka</font><br><br>"; ?>
+                        <?php 
+                            echo form_close();
+                        ?>
                        </div>
                     </div>
                     <div class="col-sm-8 col-md-8 col-lg-8 justify-content-left profilAbout">
@@ -71,7 +90,16 @@ use App\Models\KorisnikModel;
                                 echo "{$korisnik->opis}";
                             ?>
                         </span>
-                         <button type="button" class="btn">Promeni opis</button>
+                        <?php 
+                           // echo form_open("Korisnik/promenaOpisa","method=post");
+                           // echo "Promeni opis:<br>";
+                           // echo form_textarea("opis",set_value("{$korisnik->opis}"), ['maxlength'=> 250]);
+                           // echo("<br>");
+                        ?>
+                        <!-- <button type="submit" class="btn">Promeni opis</button> -->
+                         <?php 
+                          //  echo form_close();
+                        ?>
                     </div>
                 </div>
                 <div class="row profilOceneWrapper justify-content-center">

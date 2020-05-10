@@ -7,19 +7,37 @@ use App\Models\ZahtevModel;
 class Korisnik extends BaseController
 {
     protected function prikaz($page, $data) {
-        /*  Sluzi dok se ne implementira logovanje korisnika
-         
-        $korisnikModel = new KorisnikModel();
-        $this->session->set('korisnik','aleksandar');
-        $this->session->set('korisnik_id' , $korisnikModel->dohvatiId($this->session->get('korisnik')));
-        $data['korisnik']= $korisnikModel->find($this->session->get('korisnik_id'));
-        $data['controller']='Korisnik';*/
         
         $data['controller']='Korisnik';
         $data['korisnik']=$this->session->get('korisnik');
         
         echo view('sablon/header_korisnik',$data);
          echo view('sablon/kategorije');
+         
+        echo view ("stranice/$page", $data);
+        
+        echo view('sablon/reklame');
+        echo view('sablon/footer');
+    }
+    
+    
+    /**
+     * Pomocna metoda za prikaz tudjih profila
+     * @param type $page
+     * @param array $data
+     * 
+     * @author Aleksandra Bogicvevic 0390/17
+     */
+     protected function prikazProfila($page, $data) {
+        $data['controller']='Korisnik';
+        
+        echo view('sablon/header_korisnik',$data);
+         echo view('sablon/kategorije');
+         
+        $ulogovanKorisnik = $this->session->get('korisnik');
+        if($ulogovanKorisnik->idKor == $data['korisnik']->idKor){
+            $page = "mojProfil";
+        }
          
         echo view ("stranice/$page", $data);
         
@@ -49,7 +67,8 @@ class Korisnik extends BaseController
            $tip = 'premium';
        }
        else $tip = 'obicna';
-       $korisnik_id = $this->session->get('korisnik_id');
+       $korisnik = $this->session->get('korisnik');
+       $korisnik_id = $korisnik->idKor;
        $objavaModel->save([
                'naziv' => $this->request->getVar('naziv'),
                'kategorija' => $this->request->getVar('kategorija'),
@@ -75,6 +94,61 @@ class Korisnik extends BaseController
         $this->prikaz('mojProfil', ['korisnik'=>$korisnik]);
     }
     
+    /**
+     * Metoda pormenaSlike - sluzi za promenu profilne slike korisnika
+     * 
+     * @author Aleksandra Bogicevic 0390/17
+     */
+    public function promenaSlike(){
+        $korisnik=$this->session->get('korisnik');
+        
+        
+        //---------------- puzimanje ekstenzije slike
+        $target_dir = "../../public/uploads";
+        $target_file = $target_dir . basename($_FILES["profilna_slika"]["name"]);
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        if($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "jfif") {
+               return  $this->prikaz('mojProfil', ['poruka'=>"Dozvoljeni su samo JPG, JPEG i JFIF fajlovi"]);
+        }
+        //----------
+        
+        $file = $this->request->getFile('profilna_slika');
+        
+        if (! $file->isValid())
+        {
+                return  $this->prikaz('mojProfil', []);
+        }
+        
+        //provera
+        $korisnikModel1 = new KorisnikModel();
+         $korisnikIzBaze = $korisnikModel1->find($korisnik->idKor);
+                                
+        if (!empty($korisnikIzBaze->profilna_slika)) {
+            unlink("../public/uploads/"."$korisnik->korisnicko_ime"."_profilna.jpg");
+        } //prvo obrisemo postojecu
+        
+        
+        $path = $file->store('../../public/uploads',$korisnik->korisnicko_ime."_profilna.jpg");
+        
+        $data = array(
+        'korisnicko_ime' => $korisnik->korisnicko_ime,
+        'slika' => $path
+        );
+
+        $korisnikModel = new KorisnikModel(); // First load the model
+        $korisnikModel->update_photo($data);
+        
+         if($korisnikModel->update_photo($data)){ // call the method from the controller
+          // update uspesan...
+             return redirect()->to(site_url("Korisnik/mojProfil"));
+        }else{
+        // update neuspesan...
+            return  $this->prikaz('mojProfil', ['poruka'=>"Doslo je do grese pri promeni slike."]);
+        }
+    
+        
+        
+    }
    
     
     /*
@@ -84,7 +158,7 @@ class Korisnik extends BaseController
      * 
      */
     public function podrskaPotvrda(){
-        $korisnik_id = $this->session->get('korisnik_id');
+        $korisnik = $this->session->get('korisnik');
 
         if(!$this->validate([
             'temaPodrska' => 'required|min_length[3]',
@@ -98,7 +172,7 @@ class Korisnik extends BaseController
        $zahtevModel->save([
                'tema' => $this->request->getVar('temaPodrska'),
                'opis' => $this->request->getVar('porukaPodrska'),
-               'idKor' => $korisnik_id,
+               'idKor' => $korisnik->idKor,
                'status' => $status
            ]);
        
@@ -123,6 +197,18 @@ class Korisnik extends BaseController
         return redirect()->to(site_url('/'));
         
         
-     }
+    }
+    
+      /* Funkcija za odjavu ulogovanog korisnika
+     * 
+     * 
+     * @author Nikola Milicevic 0387/17
+     */
+    
+    
+    public function odjava(){
+        $this->session->destroy();
+        return redirect()->to(site_url('Gost'));
+    }
     
 }

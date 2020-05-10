@@ -93,12 +93,21 @@ use App\Models\KorisnikModel;
                     </div>
                     <div class="col-sm-4 col-md-4 col-lg-4">
                         <div class="row organizatorWrapper">
-                            <img src="../img/glava.jpg" name="organizatorSlika" id="organizatorSlika"> <br/>
-                            <p name="imeOrganizatora">
-                            <?php
+                            Organizator: <br/>
+                            <?php 
                                 $korisnikModel = new KorisnikModel();
                                 $korisnik = $korisnikModel->find($objava->idKor);
-                                echo "{$korisnik->ime} {$korisnik->prezime}";
+                                if (empty($korisnik->profilna_slika)){
+                                    $filepath="/uploads/glava.jpg"; 
+                                }else{
+                                   $filepath="/uploads/"."$korisnik->korisnicko_ime"."_profilna.jpg";
+                                }
+                            ?>
+                            <img src="<?php echo $filepath; ?>" id="organizatorSlika"> 
+                            <br/>
+                            <p name="imeOrganizatora">
+                            <?php
+                               echo anchor("$controller/profil/{$korisnik->idKor}", "$korisnik->ime $korisnik->prezime");
                             ?>
                             </p>
                         </div>
