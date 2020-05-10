@@ -1,0 +1,3 @@
+obavezo staviti glava.jpg u public/uploads
+
+baza je za testiranje (sadrzi slike)
