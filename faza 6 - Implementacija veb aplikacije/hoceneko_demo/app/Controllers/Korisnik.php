@@ -64,7 +64,7 @@ class Korisnik extends BaseController
        if($this->request->getVar('tip') == TRUE) {
            $tip = 'premium';
        }
-       else $tip = 'obicna';
+       else $tip = 'besplatna';
        $korisnik = $this->session->get('korisnik');
        $korisnik_id = $korisnik->idKor;
        $objavaModel->save([
@@ -83,7 +83,7 @@ class Korisnik extends BaseController
     }
     
     /**
-     * Metoda mojProfil - sluzi za prikazivanje prodila ulogovanog korisnika klikom na odredjeno dugme u meniju
+     * Metoda mojProfil - sluzi za prikazivanje profila ulogovanog korisnika klikom na odredjeno dugme u meniju
      * 
      * @author Aleksandra Bogicevic 0390/17
      */

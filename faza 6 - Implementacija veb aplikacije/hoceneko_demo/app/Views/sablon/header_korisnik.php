@@ -31,7 +31,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-6 colHdrBtnsAndName">
                         <span>Dobrodosli, </span>
                          <?php  echo $korisnik->ime." ".$korisnik->prezime." "; ?>  
-                         <?= anchor("Korisnik/logout", "Izloguj se",'class="btn btn-sm btn-info"') ?>
+                         <?= anchor("Korisnik/odjava", "Izloguj se",'class="btn btn-sm btn-info"') ?>
                     </div>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2">
