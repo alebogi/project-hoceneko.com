@@ -16,8 +16,8 @@ body{
 }
 
 #logo{
-    max-width:70%;
-    height: auto;
+    max-width: auto;
+    height: 140px;
 }
 
 .headerGost{
@@ -77,6 +77,10 @@ body{
 .headerKorisnik{
     height: 150px;
     background-color: black;
+}
+
+.centar{
+    height: 125vh;
 }
 
 .kat{

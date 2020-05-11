@@ -59,9 +59,10 @@
                 <li><?=anchor("$controller/mojaPretraga/Klubovi", 'Klubovi', array('class' => 'a-link'));?></li>
                 <li><?=anchor("$controller/mojaPretraga/Rejv", 'Rejv', array('class' => 'a-link'));?></li>
             </ul>
-			 <li> <?= anchor("$controller/filteri", 'Filteri', array('class'=>'a-link'));?> </li>
+			 
             <!--</li>-->
         </ul>
+		<ul> <li> <?= anchor("$controller/filteri", 'Filteri', array('class'=>'a-link'));?> </li> </ul>
     </div>
     
 </div>
