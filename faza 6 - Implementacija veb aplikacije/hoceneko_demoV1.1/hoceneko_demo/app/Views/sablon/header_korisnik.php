@@ -43,16 +43,19 @@
                             <div class="collapse navbar-collapse" id="navbarText">
                               <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                  <a class="nav-link" href="<?= site_url("Korisnik/index")?>">Pocetna <span class="sr-only">(current)</span></a>
+                                  <a class="nav-link" href="<?= site_url("$controller/index")?>">Pocetna <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" href="<?= site_url("Korisnik/mojProfil")?>">Moj profil </a>
+                                  <a class="nav-link" href="<?= site_url("$controller/mojProfil")?>">Moj profil </a>
+                                </li>
+                                 <li class="nav-item">
+                                  <a class="nav-link" href="<?= site_url("$controller/mojeObjave")?>">Moje objave </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?= site_url("Korisnik/postavljanjeObjave")?>">Dodaj objavu</a>
+                                    <a class="nav-link" href="<?= site_url("$controller/postavljanjeObjave")?>">Dodaj objavu</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="<?= site_url("Korisnik/podrska")?>">Podrska</a>
+                                    <a class="nav-link" href="<?= site_url("$controller/podrska")?>">Podrska</a>
                                   </li>
                                 <li class="nav-item">
                                   <?=anchor("$controller/pregledInfo", 'O nama', array('class' => 'nav-link'));?>

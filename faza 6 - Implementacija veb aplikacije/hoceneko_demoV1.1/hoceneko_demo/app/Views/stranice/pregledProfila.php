@@ -114,7 +114,16 @@ use App\Models\KorisnikModel;
                                   echo anchor("Korisnik/ocenaNegativna/{$drugiKorisnik->idKor}", "Negativno",'class="btn btn-sm btn-light"');
                                } 
                         ?> 
-                    &nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    <?php 
+                             $session = session();
+                              if(!empty($session->get('korisnik')) && $session->get('korisnik')->tip == 'admin'){
+                                  echo anchor("Admin/ukloniKorisnika/{$drugiKorisnik->idKor}", "Ukloni korisnika!",'class="btn btn-sm btn-light" style="background-color: red;"');
+                                  
+                               } 
+                        ?>
+                    <?php if(isset($_SESSION['porukaGreska'])) echo $_SESSION['porukaGreska']; ?>
+                    <?php unset($_SESSION['porukaGreska']); ?>
                 </div>
                 <!-- kraj pregleda profila-->
 

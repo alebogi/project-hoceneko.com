@@ -91,6 +91,24 @@ class Korisnik extends BaseController
         $korisnik=$this->session->get('korisnik');
         $this->prikaz('mojProfil', ['korisnik'=>$korisnik]);
     }
+    /**
+     * Metoda mojeObjave - sluzi za prikazivanje objava ulogovanog korisnika
+     * 
+     * @author Aleksandar Matic 
+     */
+    public function mojeObjave(){
+        $korisnik = $this->session->get('korisnik');
+        $objavaModel = new ObjavaModel();
+
+        $data = [
+            'prikaz' => 'moje_objave',
+            'objave' => $objavaModel->where('idKor',$korisnik->idKor)->paginate(10),
+            'pager' => $objavaModel->pager,
+        ];
+        
+        $this->prikaz('prikazPoStranicama', $data);
+      
+    }
     
     /**
      * Metoda pormenaSlike - sluzi za promenu profilne slike korisnika

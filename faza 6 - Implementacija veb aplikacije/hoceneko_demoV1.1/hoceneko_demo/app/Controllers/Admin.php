@@ -3,6 +3,7 @@
 use App\Models\ObjavaModel;
 use App\Models\KorisnikModel;
 use App\Models\KomentarModel;
+use App\Models\OcenioModel;
 
 /*
  * Klasa Gost - implementira metode kontrolera koji sluzi za funkcionalnosti Gosta 
@@ -51,6 +52,39 @@ class Admin extends BaseController
         
         $this->db->table('prijavljen')->where('idObj',$idObjave)->delete();
         
+        return redirect()->to(site_url("Admin/index"));
+    }
+    
+    /**
+     * Funckija ukloniKorisnika - sluzi za uklanjanje korisnika iz baze podataka
+     * @param type $idObjave
+     * @return type
+     * 
+     * @author Nikola Milicevic
+     * @coauthor Aleksandar Matic
+     */
+    public function ukloniKorisnika($idKor){
+        $korisnikModel = new KorisnikModel();
+        $korisnik = $korisnikModel->find($idKor);
+        if($korisnik->tip == 'admin'){
+            $this->session->set('porukaGreska','Ne mozete ukloniti drugog administratora!');
+            return redirect()->to(site_url("Admin/profil/$idKor"));
+        }
+        $korisnikModel->delete($idKor);
+        
+        $ocenioModel = new OcenioModel();
+        $ocenioModel->where('idOcenjen',$idKor)->delete();
+        
+        $objavaModel = new ObjavaModel();
+        $objaveZaBrisanje = $objavaModel->where('idKor',$idKor)->findAll();
+        
+        foreach($objaveZaBrisanje as $objava){
+            $komentarModel = new KomentarModel();
+            $komentarModel->where('idObj',$objava->idObj)->delete();
+            
+            $this->db->table('prijavljen')->where('idObj' ,$objava->idObj)->delete();
+            $objavaModel->delete($objava->idObj);
+        }
         return redirect()->to(site_url("Admin/index"));
     }
     
@@ -123,6 +157,25 @@ class Admin extends BaseController
     public function mojProfil(){
         $korisnik=$this->session->get('korisnik');
         $this->prikaz('mojProfil', ['korisnik'=>$korisnik]);
+    }
+    
+     /**
+     * Metoda mojeObjave - sluzi za prikazivanje objava ulogovanog korisnika
+     * 
+     * @author Aleksandar Matic 
+     */
+    public function mojeObjave(){
+        $korisnik = $this->session->get('korisnik');
+        $objavaModel = new ObjavaModel();
+        
+        $data = [
+            'prikaz' => 'moje_objave',
+            'objave' => $objavaModel->where('idKor',$korisnik->idKor)->paginate(10),
+            'pager' => $objavaModel->pager,
+        ];
+        
+        $this->prikaz('prikazPoStranicama', $data);
+      
     }
     
     /**

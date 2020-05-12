@@ -126,12 +126,12 @@ class BaseController extends Controller
         }
         
         $data = [
-            'filtrirano' => true,
+            'prikaz' => 'filtrirano',
             'objave' =>  $objavaModel->dohvatiPoFilterima($_SESSION['datum_od'],$_SESSION['datum_do'],$_SESSION['mesto'],$_SESSION['vreme_od'],$_SESSION['vreme_do']),
             'pager' => $objavaModel->pager,
         ];
         
-        $this->prikaz('filtriraneObjave', $data);
+        $this->prikaz('prikazPoStranicama', $data);
     }
     
      /**
