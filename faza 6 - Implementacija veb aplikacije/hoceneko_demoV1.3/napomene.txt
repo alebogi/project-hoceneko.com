@@ -1,0 +1,3 @@
+app/filters/AdminFilter.php - treba ispisati
+
+app/config/Filters.php - dodati alijas
