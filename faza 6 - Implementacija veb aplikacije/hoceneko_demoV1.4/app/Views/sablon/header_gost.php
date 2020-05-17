@@ -29,9 +29,8 @@
 
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 colHdrBtns">
-                        <?= anchor("Gost/login", "Uloguj se") ?> <!-- OVO JE DODATO SAMO ZA TEST - TREBA VIDETI KAKO DA SE DESAVA ONCLICK BUTTON-A -->
-                        <button class="btn" type="button" href='Gost/login'> Uloguj se </button>
-                        <button class="btn" type="button"> Registruj se </button>
+                        <?= anchor("Gost/login", "Uloguj se",'class="btn btn-sm btn-info"') ?> 
+                         <?= anchor("Gost/register", "Registruj se",'class="btn btn-sm btn-info"') ?>
                     </div>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2">
