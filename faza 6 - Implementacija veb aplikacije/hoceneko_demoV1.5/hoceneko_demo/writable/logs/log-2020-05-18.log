@@ -1,0 +1,69 @@
+CRITICAL - 2020-05-18 07:26:41 --> Unknown database 'hoceneko'
+#0 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\hoceneko_demo\app\Controllers\BaseController.php(75): CodeIgniter\Model->findAll(3)
+#5 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\BaseController->index()
+#6 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#7 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\hoceneko_demo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\h...')
+#10 {main}
+CRITICAL - 2020-05-18 07:26:41 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\wamp64\www\hoceneko_demo\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\wamp64\\www\\h...', 100, Array)
+#1 C:\wamp64\www\hoceneko_demo\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Gost), true)
+#2 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(299): include('C:\\wamp64\\www\\h...')
+#3 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(172): CodeIgniter\Debug\Exceptions->render(Object(mysqli_sql_exception), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(mysqli_sql_exception))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-05-18 07:26:59 --> Unknown database 'hoceneko'
+#0 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\hoceneko_demo\app\Controllers\BaseController.php(75): CodeIgniter\Model->findAll(3)
+#5 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\BaseController->index()
+#6 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#7 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\hoceneko_demo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\h...')
+#10 {main}
+CRITICAL - 2020-05-18 07:26:59 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\wamp64\www\hoceneko_demo\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\wamp64\\www\\h...', 100, Array)
+#1 C:\wamp64\www\hoceneko_demo\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Gost), true)
+#2 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(299): include('C:\\wamp64\\www\\h...')
+#3 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(172): CodeIgniter\Debug\Exceptions->render(Object(mysqli_sql_exception), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(mysqli_sql_exception))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-05-18 07:26:59 --> Unknown database 'hoceneko'
+#0 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\hoceneko_demo\app\Controllers\BaseController.php(75): CodeIgniter\Model->findAll(3)
+#5 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\BaseController->index()
+#6 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gost))
+#7 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\hoceneko_demo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\wamp64\\www\\h...')
+#10 {main}
+CRITICAL - 2020-05-18 07:27:00 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\wamp64\www\hoceneko_demo\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\wamp64\\www\\h...', 100, Array)
+#1 C:\wamp64\www\hoceneko_demo\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Gost), true)
+#2 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(299): include('C:\\wamp64\\www\\h...')
+#3 C:\wamp64\www\hoceneko_demo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(172): CodeIgniter\Debug\Exceptions->render(Object(mysqli_sql_exception), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(mysqli_sql_exception))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
