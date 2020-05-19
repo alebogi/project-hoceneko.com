@@ -141,7 +141,7 @@ class BaseController extends Controller
      * @author Ognjen Subaric 0425/17
      */
     public function pregledInfo(){
-        $this->prikaz('Info', ['']);
+        $this->prikaz('info', ['']);
     }
     
     /**
@@ -151,7 +151,7 @@ class BaseController extends Controller
      * 
      * @author Ognjen Subaric 0425/17
      */
-    public function mojaPretraga($kategorija){
+    public function pretraga($kategorija){
         $objavaModel = new ObjavaModel();
         $this->session->set('kategorija', $kategorija);
         $objave = $objavaModel->pretraga($kategorija);
@@ -160,7 +160,7 @@ class BaseController extends Controller
         foreach ($objave as $objava){
             $korisnickoIme += [$objava->idKor => $korisnikModel->dohvatiKorisnickoIme($objava->idKor)];
         }
-        $this->prikaz('Objave', ['objave'=>$objave, 'korIme'=>$korisnickoIme]);     
+        $this->prikaz('Objave', ['objave'=>$objave, 'korIme'=>$korisnickoIme, 'obavestenje'=>"Nema objava za prikaz"]);     
     }
     
     /**
@@ -198,7 +198,7 @@ class BaseController extends Controller
         foreach ($objave as $objava){
             $korisnickoIme += [$objava->idKor => $korisnikModel->dohvatiKorisnickoIme($objava->idKor)];
         }
-        $this->prikaz('Objave', ['objave'=>$objave, 'poruka'=>$poruka, 'korIme'=>$korisnickoIme]); 
+        $this->prikaz('objave', ['objave'=>$objave, 'poruka'=>$poruka, 'korIme'=>$korisnickoIme]); 
     }
     
     /*

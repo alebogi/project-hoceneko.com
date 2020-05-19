@@ -232,17 +232,10 @@ class Korisnik extends BaseController
      * @author Ognjen Subaric 0425/17
      */
     public function postaviKomentar($idObj) {
-        //global $url;
-        //$korisnik=$this->session->get('komentar');
-        //if(isset($_POST['komentar'])){
         if(isset($_GET['submitKom']) && $_GET['randcheck']==$_SESSION['rand'] && $_GET['komentar']!='') {
             $komentarModel = new KomentarModel();
             $korisnik=$this->session->get('korisnik');
             $komentarModel->ubaciKomentar($_GET['komentar'], $korisnik->idKor, $idObj);
-            //unset($_POST);
-            //current_url([$returnObject = false])=site_url("$controller/objava/{$objava->idObj}");
-            
-            //redirect(site_url("$controller/objava/{$objava->idObj}"), 'refresh');
         }
         $this->objava($idObj);
     }
@@ -414,6 +407,7 @@ class Korisnik extends BaseController
         return redirect()->back();
         
     }
+    
     
     
 }

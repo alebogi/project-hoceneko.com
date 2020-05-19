@@ -121,7 +121,7 @@ use App\Models\KorisnikModel;
                                 $korisnik = $korisnikModel->find($komentar->idKor);
                                 
                                 
-                                echo "<li>".anchor("$controller/profil/{$korisnik->idKor}", "$korisnik->korisnicko_ime")." : ".$komentar->sadrzaj;
+                                echo "<li>".anchor("$controller/profil/{$korisnik->idKor}", "$korisnik->korisnicko_ime")." : " . htmlspecialchars($komentar->sadrzaj);
                             
                                 
                                // echo "<li>".$korisnik->korisnicko_ime." : ".$komentar->sadrzaj;

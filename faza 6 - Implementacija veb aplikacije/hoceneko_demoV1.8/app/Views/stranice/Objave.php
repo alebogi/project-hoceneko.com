@@ -32,6 +32,8 @@ if(isset($poruka)) {
 else{
     echo "Sortirano po datumu, rastuce <br><br><br>";
 }
+if(isset($obavestenje))
+    echo $obavestenje;
 ?>
 
 
@@ -44,17 +46,12 @@ foreach ($objave as $objava) {
     $organizatorId = $korisnikModel->dohvatiId($organizatorKorIme);
     
     
-    echo "<b>{$objava->naziv}</b><br>"
+    echo "<b>" . htmlspecialchars($objava->naziv) . "</b><br>"
       . "Organizator: " . anchor("$controller/profil/$organizatorId",  $korIme[$objava->idKor])  . "<br>"
-   /* . "Broj potrebnih clanova: " . "{$objava->br_potrebnih_clanova}<br>"
-    . "Broj prijavljenih clanova: " . "{$objava->br_prijavljenih_clanova}<br>"
-    . "Datum odrzavanja: " . "{$objava->datum}<br>"
-    . "Vreme odrzavanja: " . "{$objava->vreme}<br>"
-    . "Mesto odrzavanja: " . "{$objava->mesto}<br>"*/
      . "Datum odrzavanja: " . "{$objava->datum}<br>"
     . "Broj potrebnih clanova: " . "{$objava->br_potrebnih_clanova}"
     . " &nbsp; &nbsp; &nbsp; Broj prijavljenih clanova: " . "{$objava->br_prijavljenih_clanova}<br><br>" 
-    . "{$objava->opis}<br>" 
+    . htmlspecialchars($objava->opis) . "<br>" 
     .anchor("$controller/objava/{$objava->idObj}", "...detaljnije"). "<br><hr><br>";
      
     
