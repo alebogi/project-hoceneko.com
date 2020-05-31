@@ -174,8 +174,8 @@ use App\Models\KorisnikModel;
                             </div>
                         </form>
                         </div>
-                        <div class="row justify-content-center">
-                           <br/> <br/>   <br/> <br/>
+                     <!--   <div class="row justify-content-center">
+                           <br/> <br/>   <br/> <br/> -->
                               <?php }
                                 else { ?>
                         <div class="row dodajMe Wrapper justify-content-center">
@@ -188,20 +188,25 @@ use App\Models\KorisnikModel;
                             </div>
                         </form>
                         </div>
-                       <div class="row justify-content-center">
-                           <br/> <br/>   <br/> <br/>
+                      <!-- <div class="row justify-content-center">
+                           <br/> <br/>   <br/> <br/> -->
                            
                            <?php
                                 }
                          if($controller == 'Admin'){ ?>
+                      <div class="row justify-content-center">
+                           <br/> <br/>   <br/> <br/>
                             <div class="col-sm-6 col-md-6 col-lg-6 colHdrBtnsAndName">
                             <?= anchor("Admin/ukloniObjavu/{$objava->idObj}", "Ukloni objavu!",'class="btn btn-sm btn-info" style="background-color: red;"') ?>
                             </div>
+                           
+                           </div>
                         <?php }
                                 }?>
-                       </div>
-                    </div>
+                     <!--  </div> -->
+                    </div> <!-- ovde -->
                 </div>
                  <!-- kraj pojedinacna objava-->
             </div>
             <!-- kraj main dela koji ce se ubacivati - "stranice" -->
+            

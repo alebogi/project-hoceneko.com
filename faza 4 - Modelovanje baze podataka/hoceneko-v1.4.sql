@@ -22,6 +22,8 @@ SET time_zone = "+00:00";
 -- Database: `hoceneko`
 --
 
+CREATE DATABASE IF NOT EXISTS `hoceneko` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `hoceneko`;
 -- --------------------------------------------------------
 
 --
