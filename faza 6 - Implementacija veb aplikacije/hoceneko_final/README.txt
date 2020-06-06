@@ -1,0 +1,1 @@
+Napraviti novi projekat na svom racunaru pomocu composer-a, a potom ova dva foldera (app i public) prelepiti preko postojecih foldera pod istim imenom.
