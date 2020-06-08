@@ -1,0 +1,203 @@
+{
+  "id": "52d7fedd-7571-4296-9b40-398f4ca91c0e",
+  "version": "2.0",
+  "name": "AB-cetvrta funkcionalnost",
+  "url": "http://localhost:8080/Admin",
+  "tests": [{
+    "id": "1880700d-b896-4b85-8b89-fd1d1a15f4ba",
+    "name": "4.2. Dodavanje komentara kao korisnik",
+    "commands": [{
+      "id": "3b1baa18-08ba-4931-af33-b9fcbebe9c8c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de1fbf1c-562b-40e0-abf0-68274b9e2f68",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64a12e9a-c756-4e9c-a1fe-f037bf4631c3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Link",
+      "targets": [
+        ["linkText=Link", "linkText"],
+        ["css=.pocetnatable:nth-child(4) tr:nth-child(2) > td:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Link')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/objava/3']", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Link')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33371104-01a3-4ff1-a597-e374f9773c24",
+      "comment": "",
+      "command": "click",
+      "target": "id=dodajKom",
+      "targets": [
+        ["id=dodajKom", "id"],
+        ["name=komentar", "name"],
+        ["css=.txtareawrapper > #dodajKom", "css:finder"],
+        ["xpath=//textarea[@id='dodajKom']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f830e63-83de-467f-a135-2b4e86b1e282",
+      "comment": "",
+      "command": "type",
+      "target": "id=dodajKom",
+      "targets": [
+        ["id=dodajKom", "id"],
+        ["name=komentar", "name"],
+        ["css=.txtareawrapper > #dodajKom", "css:finder"],
+        ["xpath=//textarea[@id='dodajKom']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Ovo je bas lepo"
+    }, {
+      "id": "26e44653-db6c-484f-816b-86272a4c9293",
+      "comment": "",
+      "command": "click",
+      "target": "name=submitKom",
+      "targets": [
+        ["name=submitKom", "name"],
+        ["css=.row:nth-child(3) > #dodajKom", "css:finder"],
+        ["xpath=//button[@id='dodajKom']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Komentarisi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "35eadd33-c015-4717-a28a-eeb4fcdf4e9a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,200)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "568dfebb-1009-4a1f-93f4-270ef4c6bbbb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row > ul > li:nth-child(3)",
+      "targets": [
+        ["css=.row > ul > li:nth-child(3)", "css:finder"],
+        ["xpath=//div[4]/div/div[2]/ul/li[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2cd7908-2f87-466b-afdd-94cfff2a095f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row > ul > li:nth-child(3)",
+      "targets": [
+        ["css=.row > ul > li:nth-child(3)", "css:finder"],
+        ["xpath=//div[4]/div/div[2]/ul/li[3]", "xpath:position"]
+      ],
+      "value": "ognjen : Ovo je bas lepo"
+    }]
+  }, {
+    "id": "596ea646-3e03-4a1e-8298-f6e539610684",
+    "name": "4.3. Dodavanje komentara kao admin",
+    "commands": [{
+      "id": "4fd65e65-f727-4e55-b453-c3e6ba869ab3",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Admin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19830207-53a8-45a9-8c86-d66513576fca",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6ad8b43-1c23-44ff-aca2-14e13a95b93b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Link",
+      "targets": [
+        ["linkText=Link", "linkText"],
+        ["css=.pocetnatable:nth-child(4) tr:nth-child(2) > td:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Link')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/objava/3']", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Link')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b49faa2-fe8b-4371-a366-619ad1bdba62",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,592.7999877929688)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0233890-1577-4dbc-9097-ff007eccc4bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=dodajKom",
+      "targets": [
+        ["id=dodajKom", "id"],
+        ["name=komentar", "name"],
+        ["css=.txtareawrapper > #dodajKom", "css:finder"],
+        ["xpath=//textarea[@id='dodajKom']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b1f4afc-2889-443e-a3e9-48eb7a6fb632",
+      "comment": "",
+      "command": "type",
+      "target": "id=dodajKom",
+      "targets": [
+        ["id=dodajKom", "id"],
+        ["name=komentar", "name"],
+        ["css=.txtareawrapper > #dodajKom", "css:finder"],
+        ["xpath=//textarea[@id='dodajKom']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Vrlo lijepo"
+    }, {
+      "id": "d55b1db7-83ab-4372-9955-c8576809f820",
+      "comment": "",
+      "command": "click",
+      "target": "name=submitKom",
+      "targets": [
+        ["name=submitKom", "name"],
+        ["css=.row:nth-child(3) > #dodajKom", "css:finder"],
+        ["xpath=//button[@id='dodajKom']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Komentarisi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f905e88-89c5-4296-b775-b7e0173bde35",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.komWrapper li:nth-child(5)",
+      "targets": [
+        ["css=.komWrapper li:nth-child(5)", "css:finder"],
+        ["xpath=//div[4]/div/div[2]/ul/li[5]", "xpath:position"]
+      ],
+      "value": "aleksandra : Vrlo lijepo\\nX"
+    }]
+  }],
+  "suites": [{
+    "id": "d0cea6e6-c522-4f2d-81aa-dab0104b8862",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1880700d-b896-4b85-8b89-fd1d1a15f4ba"]
+  }],
+  "urls": ["http://localhost:8080/Korisnik", "http://localhost:8080/Admin"],
+  "plugins": []
+}

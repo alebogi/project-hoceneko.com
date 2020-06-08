@@ -1,0 +1,296 @@
+{
+  "id": "543dc438-2339-430c-8f4b-086592caa8df",
+  "version": "2.0",
+  "name": "AB-prva funkcionalnost",
+  "url": "localhost:8080/Gost",
+  "tests": [{
+    "id": "65942525-e264-4693-b541-b2f5665e6ddf",
+    "name": "1. Pregled stranice-kao gost",
+    "commands": [{
+      "id": "6f6f3096-a411-47a5-a4b5-73003feed0d9",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Gost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b64c6744-5bb0-447f-a672-fe06cc8ea887",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5475df2-b52a-4881-96f0-123ca7677bd6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=O nama",
+      "targets": [
+        ["linkText=O nama", "linkText"],
+        ["css=#info > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'O nama')]", "xpath:link"],
+        ["xpath=(//a[@onclick='promeniBojuNav()'])[2]", "xpath:attributes"],
+        ["xpath=//li[@id='info']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pregledInfo']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'O nama')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c81812e-b33a-48c9-a309-18ac19ffd0ca",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row > h3",
+      "targets": [
+        ["css=.row > h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'O aplikaciji ...')]", "xpath:innerText"]
+      ],
+      "value": "O aplikaciji ..."
+    }]
+  }, {
+    "id": "5e145e66-ee28-4e2b-a75b-e7d070ef104c",
+    "name": "2. Pregled stranice-korisnik",
+    "commands": [{
+      "id": "22bb8d3b-1079-40c8-9bd9-206f04202778",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Gost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f00ce60-0be0-4a91-b82c-b13970bae30d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cf08844-0cbc-441b-9cc5-3cfc7ae0cd43",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Uloguj se",
+      "targets": [
+        ["linkText=Uloguj se", "linkText"],
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Uloguj se')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/login']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Uloguj se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50ce70f1-b596-4be6-b267-3d07dd231674",
+      "comment": "",
+      "command": "click",
+      "target": "name=korisnicko_ime",
+      "targets": [
+        ["name=korisnicko_ime", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc37e88b-7b64-4f8e-bea6-ae8a6120ef45",
+      "comment": "",
+      "command": "type",
+      "target": "name=korisnicko_ime",
+      "targets": [
+        ["name=korisnicko_ime", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "djuraPas"
+    }, {
+      "id": "375595d3-9d59-45ef-9c4d-d5243d1040d5",
+      "comment": "",
+      "command": "click",
+      "target": "name=lozinka",
+      "targets": [
+        ["name=lozinka", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "574b81de-c2fb-4776-92f2-beeec232fc37",
+      "comment": "",
+      "command": "type",
+      "target": "name=lozinka",
+      "targets": [
+        ["name=lozinka", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "sifra123"
+    }, {
+      "id": "ac2fa838-42f7-4301-8936-8a20270bc3ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row > .btn",
+      "targets": [
+        ["css=.row > .btn", "css:finder"],
+        ["xpath=//input[@value='Log in']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ef6da5f-00a8-413f-9f60-f4c0bcee2828",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=O nama",
+      "targets": [
+        ["linkText=O nama", "linkText"],
+        ["css=#info > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'O nama')]", "xpath:link"],
+        ["xpath=//li[@id='info']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/pregledInfo']", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'O nama')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "105b2f28-ce44-4219-9963-d0cb28eb668a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row > h3",
+      "targets": [
+        ["css=.row > h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'O aplikaciji ...')]", "xpath:innerText"]
+      ],
+      "value": "O aplikaciji ..."
+    }]
+  }, {
+    "id": "93dd2181-b572-4997-8062-a39ac6f3955d",
+    "name": "3. Pregled stranice-admin",
+    "commands": [{
+      "id": "2f16408a-73e9-4904-b17d-9a77d05fb216",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Gost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b04b594-7120-46f2-baa5-f0bc26f2dbf8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a46bad1-eaa9-4af4-89ed-a3db2d40a00d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Uloguj se",
+      "targets": [
+        ["linkText=Uloguj se", "linkText"],
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Uloguj se')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/login']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Uloguj se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a09e8586-af8d-479d-b808-5fc2dfa567e8",
+      "comment": "",
+      "command": "click",
+      "target": "name=korisnicko_ime",
+      "targets": [
+        ["name=korisnicko_ime", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cb098a7-990f-4f7a-92d7-74429aa4b7ce",
+      "comment": "",
+      "command": "type",
+      "target": "name=korisnicko_ime",
+      "targets": [
+        ["name=korisnicko_ime", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "aleksandra"
+    }, {
+      "id": "c311f383-5a98-4f83-aac8-09fe877ca384",
+      "comment": "",
+      "command": "click",
+      "target": "name=lozinka",
+      "targets": [
+        ["name=lozinka", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49aa9f38-eedb-4bc2-acfe-512dfccba5bd",
+      "comment": "",
+      "command": "type",
+      "target": "name=lozinka",
+      "targets": [
+        ["name=lozinka", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "sifra123"
+    }, {
+      "id": "ef0388c4-fb58-4ae7-bb53-257929ea31b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row > .btn",
+      "targets": [
+        ["css=.row > .btn", "css:finder"],
+        ["xpath=//input[@value='Log in']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2108ceaa-8e2d-49b7-8e08-746574f80fce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=O nama",
+      "targets": [
+        ["linkText=O nama", "linkText"],
+        ["css=#info > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'O nama')]", "xpath:link"],
+        ["xpath=//li[@id='info']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/pregledInfo']", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'O nama')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bf0c0a5-5e39-4662-92c8-27df886a7820",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row > h3",
+      "targets": [
+        ["css=.row > h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'O aplikaciji ...')]", "xpath:innerText"]
+      ],
+      "value": "O aplikaciji ..."
+    }]
+  }],
+  "suites": [{
+    "id": "453b179a-aad5-4b63-a639-c3db9b6786f1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["65942525-e264-4693-b541-b2f5665e6ddf"]
+  }],
+  "urls": ["localhost:8080/Gost"],
+  "plugins": []
+}
