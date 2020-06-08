@@ -1,0 +1,1116 @@
+{
+  "id": "cfcb2d02-f245-40e9-a787-93a352950be2",
+  "version": "2.0",
+  "name": "Ognjen Subaric - hoceneko_selenium",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "e4c47cd3-cdc7-4c7a-93f3-e87fa3c5f3af",
+    "name": "Pregled pojedinacne objave (neulogovani korisnik)",
+    "commands": [{
+      "id": "994c812b-0686-4c2a-98aa-fb6a1b8a4376",
+      "comment": "",
+      "command": "open",
+      "target": "/Gost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8124cf99-4ce2-4a83-96db-51adb429db1d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55734f9e-f665-46d9-9283-094fd449a90e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sve objave",
+      "targets": [
+        ["linkText=Sve objave", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(1) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sve objave')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/sve']", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sve objave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae2e2c7d-7421-4ead-9b49-30d79c9787d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=...detaljnije",
+      "targets": [
+        ["linkText=...detaljnije", "linkText"],
+        ["css=a:nth-child(15)", "css:finder"],
+        ["xpath=//a[contains(text(),'...detaljnije')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/objava/4']", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'...detaljnije')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "528d456e-fd1f-480a-b998-b31516988a76",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=nazivObjave",
+      "targets": [
+        ["id=nazivObjave", "id"],
+        ["css=#nazivObjave", "css:finder"],
+        ["xpath=//span[@id='nazivObjave']", "xpath:attributes"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'NAJJACA OBJAVA IKAD')]", "xpath:innerText"]
+      ],
+      "value": "NAJJACA OBJAVA IKAD"
+    }]
+  }, {
+    "id": "bb4f7abe-dba3-415a-bd5f-dda0b23ed2e5",
+    "name": "Pregled pojedinacne objave (ulogovani korisnik)",
+    "commands": [{
+      "id": "a978cf10-a1fb-4b3a-83f5-e4af3ccaa9bc",
+      "comment": "",
+      "command": "open",
+      "target": "/Gost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37f9ac39-b1e1-45e5-978f-c7a56da80834",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22dd1437-ed6c-480f-b980-d37c6fad5ea2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Uloguj se",
+      "targets": [
+        ["linkText=Uloguj se", "linkText"],
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Uloguj se')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/login']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Uloguj se')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eec128d-c26a-4379-bf63-47f4aab1a32f",
+      "comment": "",
+      "command": "click",
+      "target": "name=korisnicko_ime",
+      "targets": [
+        ["name=korisnicko_ime", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15d3ba5e-7475-4d21-81de-408292478451",
+      "comment": "",
+      "command": "type",
+      "target": "name=korisnicko_ime",
+      "targets": [
+        ["name=korisnicko_ime", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='korisnicko_ime']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ognjen"
+    }, {
+      "id": "3f239982-519a-4daa-b92f-c95a29197428",
+      "comment": "",
+      "command": "click",
+      "target": "name=lozinka",
+      "targets": [
+        ["name=lozinka", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e001fe0-83b6-4a19-bb3b-1c96909a2dd2",
+      "comment": "",
+      "command": "type",
+      "target": "name=lozinka",
+      "targets": [
+        ["name=lozinka", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='lozinka']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "sifra123"
+    }, {
+      "id": "ba6833ed-7081-4c33-ae8f-c76a4cb086c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row > .btn",
+      "targets": [
+        ["css=.row > .btn", "css:finder"],
+        ["xpath=//input[@value='Log in']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f78437d-3dfa-4c27-a298-1102068769db",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sve objave",
+      "targets": [
+        ["linkText=Sve objave", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(1) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sve objave')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/pretraga/sve']", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sve objave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09485329-e3f2-4fd4-b0c7-e4d2f2eda934",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=...detaljnije",
+      "targets": [
+        ["linkText=...detaljnije", "linkText"],
+        ["css=a:nth-child(15)", "css:finder"],
+        ["xpath=//a[contains(text(),'...detaljnije')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/objava/4']", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'...detaljnije')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9191bf69-9a43-463c-bb6f-7bfe4a41e8e5",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=nazivObjave",
+      "targets": [
+        ["id=nazivObjave", "id"],
+        ["css=#nazivObjave", "css:finder"],
+        ["xpath=//span[@id='nazivObjave']", "xpath:attributes"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'NAJJACA OBJAVA IKAD')]", "xpath:innerText"]
+      ],
+      "value": "NAJJACA OBJAVA IKAD"
+    }]
+  }, {
+    "id": "9e1f58e2-797a-48cb-af8b-c2d6841301cb",
+    "name": "Moj profil",
+    "commands": [{
+      "id": "589d0b7f-f1ab-4af1-914b-a82ac171233e",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22e860b6-4dfe-4ba7-9076-8e2b4908c1fa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4bf7f6f-f3bc-40ad-9d08-b7a493cc7f79",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Moj profil",
+      "targets": [
+        ["linkText=Moj profil", "linkText"],
+        ["css=#mojProfil > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Moj profil')]", "xpath:link"],
+        ["xpath=//li[@id='mojProfil']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/mojProfil']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Moj profil')]", "xpath:innerText"]
+      ],
+      "value": "Moj profil"
+    }, {
+      "id": "c9963c12-5efb-482b-9039-67479ca57b9a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Moj profil",
+      "targets": [
+        ["linkText=Moj profil", "linkText"],
+        ["css=#mojProfil > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Moj profil')]", "xpath:link"],
+        ["xpath=//li[@id='mojProfil']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/mojProfil']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Moj profil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a0bec08-7884-4f88-a136-90e7ef62572e",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=profilKorIme",
+      "targets": [
+        ["id=profilKorIme", "id"],
+        ["css=#profilKorIme", "css:finder"],
+        ["xpath=//span[@id='profilKorIme']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ognjen')]", "xpath:innerText"]
+      ],
+      "value": "ognjen"
+    }]
+  }, {
+    "id": "50a38522-c354-40fb-880e-f7c081660ab4",
+    "name": "Pregled profila (neulogovani korisnik)",
+    "commands": [{
+      "id": "575b5d9b-bdd8-4fc4-81fb-4f40b5b06b66",
+      "comment": "",
+      "command": "open",
+      "target": "/Gost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb93df15-e50a-4e1a-a250-fbdc1514247d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c740f51d-b21a-4166-9823-a78fa3f8e2b2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sve objave",
+      "targets": [
+        ["linkText=Sve objave", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(1) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sve objave')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/sve']", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sve objave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "509e26b9-43bc-4b8c-a08a-3b41e6db15ff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=aleksandra",
+      "targets": [
+        ["linkText=aleksandra", "linkText"],
+        ["css=a:nth-child(9)", "css:finder"],
+        ["xpath=//a[contains(text(),'aleksandra')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/profil/4']", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'aleksandra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50ebb7b8-7bdc-4508-9293-b9894f76e45c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=profilKorIme",
+      "targets": [
+        ["id=profilKorIme", "id"],
+        ["css=#profilKorIme", "css:finder"],
+        ["xpath=//span[@id='profilKorIme']", "xpath:attributes"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'aleksandra')]", "xpath:innerText"]
+      ],
+      "value": "aleksandra"
+    }]
+  }, {
+    "id": "4e5a4fba-dd7d-4586-8279-e864b9454f09",
+    "name": "Pregled profila (ulogovani korisnik)",
+    "commands": [{
+      "id": "c444605a-f83b-4796-9eca-53d03de52bf6",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c9bab19-1598-4802-be14-244c88098b2b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff6c0b8c-ae08-40e1-a8a2-b38411240771",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sve objave",
+      "targets": [
+        ["linkText=Sve objave", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(1) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sve objave')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/pretraga/sve']", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sve objave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd457e30-fc74-43d0-8f42-5878f96ba480",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=aleksandra",
+      "targets": [
+        ["linkText=aleksandra", "linkText"],
+        ["css=a:nth-child(9)", "css:finder"],
+        ["xpath=//a[contains(text(),'aleksandra')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/profil/4']", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'aleksandra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "797499ce-0242-48c1-b66d-fe0fe453a883",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=profilKorIme",
+      "targets": [
+        ["id=profilKorIme", "id"],
+        ["css=#profilKorIme", "css:finder"],
+        ["xpath=//span[@id='profilKorIme']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'aleksandra')]", "xpath:innerText"]
+      ],
+      "value": "aleksandra"
+    }, {
+      "id": "f88e201e-fc90-49e7-90d6-b6168eb1eca4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Moje objave",
+      "targets": [
+        ["linkText=Moje objave", "linkText"],
+        ["css=#mojeObjave > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Moje objave')]", "xpath:link"],
+        ["xpath=//li[@id='mojeObjave']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Admin/mojeObjave']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Moje objave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c1da664-2a18-4c12-bc04-32c51293fa44",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col-sm-8 > h3",
+      "targets": [
+        ["css=.col-sm-8 > h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Moje objave:')]", "xpath:innerText"]
+      ],
+      "value": "Moje objave:"
+    }]
+  }, {
+    "id": "02b71bb3-e374-4511-bca6-a88a97b53db2",
+    "name": "Podrska (ulogovani korisnik)",
+    "commands": [{
+      "id": "ab1362b4-f327-4dde-a8fd-77a0ab99cf35",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1848154-5dcc-4877-8f5f-a5fe95604458",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "641bbec8-d2e7-44b8-abd2-5e99e7f3a915",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Podrska",
+      "targets": [
+        ["linkText=Podrska", "linkText"],
+        ["css=#podrska > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Podrska')]", "xpath:link"],
+        ["xpath=//li[@id='podrska']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/podrska']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Podrska')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5c02fc9-567d-46be-b6b8-0761a782edfd",
+      "comment": "",
+      "command": "click",
+      "target": "id=temaPodrska",
+      "targets": [
+        ["id=temaPodrska", "id"],
+        ["name=temaPodrska", "name"],
+        ["css=#temaPodrska", "css:finder"],
+        ["xpath=//input[@id='temaPodrska']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de1f4965-83f0-43b3-a317-544f92fdeab6",
+      "comment": "",
+      "command": "type",
+      "target": "id=temaPodrska",
+      "targets": [
+        ["id=temaPodrska", "id"],
+        ["name=temaPodrska", "name"],
+        ["css=#temaPodrska", "css:finder"],
+        ["xpath=//input[@id='temaPodrska']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Problem sa objavama"
+    }, {
+      "id": "68a3ac6e-5bea-46fb-9563-aaafd77bc0b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=porukaPodrska",
+      "targets": [
+        ["id=porukaPodrska", "id"],
+        ["name=porukaPodrska", "name"],
+        ["css=#porukaPodrska", "css:finder"],
+        ["xpath=//textarea[@id='porukaPodrska']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Postovani, ne mogu da nadjem svoju objavu."
+    }, {
+      "id": "bf9f83c1-c234-4456-9d4d-f7945804684b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(11)",
+      "targets": [
+        ["css=.btn:nth-child(11)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Posalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "686ff328-bafc-412c-8528-0c40a5b3d0e5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.podrskaPotvrda",
+      "targets": [
+        ["css=.podrskaPotvrda", "css:finder"],
+        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "Vasa poruka je uspesno poslata!\\nHvala sto ste nam se obratili.\\nPotrudicemo se da u sto kracem roku procitamo Vasu poruku i po potrebi da Vas kontaktiramo."
+    }]
+  }, {
+    "id": "d81d6001-469f-4e57-9ef3-bed6464122d9",
+    "name": "Podrska (neulogovani korisnik)",
+    "commands": [{
+      "id": "0290ddcb-7773-439b-8e09-d9aa5fc3201d",
+      "comment": "",
+      "command": "open",
+      "target": "/Gost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b644567f-83d4-4749-af02-6dd0c80828ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57ee379b-d628-4cc9-81c6-69d22291468d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Podrska",
+      "targets": [
+        ["linkText=Podrska", "linkText"],
+        ["css=#podrska > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Podrska')]", "xpath:link"],
+        ["xpath=(//a[@onclick='promeniBojuNav()'])[3]", "xpath:attributes"],
+        ["xpath=//li[@id='podrska']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/podrska']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Podrska')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "879f1eb0-e04c-42c3-8756-c87e36eab8c0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.podrskaPotvrda",
+      "targets": [
+        ["css=.podrskaPotvrda", "css:finder"],
+        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "Morate biti ulogovani da biste poslali podrsci poruku."
+    }]
+  }, {
+    "id": "ab9f0e59-44e5-4e4c-8a58-0ca6916ec876",
+    "name": "Sabloni i view-i",
+    "commands": [{
+      "id": "96b7bc98-6583-47b6-ad25-9a539adea7a7",
+      "comment": "",
+      "command": "open",
+      "target": "/Gost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fc05bca-17d1-40d8-868c-f12a11a7b14f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fc99712-775e-438e-a463-9195c9e8d79c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sve objave",
+      "targets": [
+        ["linkText=Sve objave", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(1) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sve objave')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/sve']", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sve objave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24e75523-1e3c-4953-ad4e-4aa12c432051",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.main",
+      "targets": [
+        ["css=.main", "css:finder"],
+        ["xpath=//body/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Sortiraj po: \\n        \\ndatumu(rastuce)\\n        datumu(opadajuce)\\n        oceni(rastuce)\\n        oceni(opadajuce)\\n        broju trazenih ljudi(rastuce)\\n        broju trazenih ljudi(opadajuce)\\n     Sortiraj\\n\\n\\nSortirano po datumu, rastuce\\n\\n\\nNAJJACA OBJAVA IKAD\\nOrganizator: aleksandra\\nDatum odrzavanja: 2020-08-18\\nBroj potrebnih clanova: 50       Broj prijavljenih clanova: 2\\n\\nrejv blok 70 pod nazivom \"sirimo covid-19\". idemo sviiii\\n...detaljnije"
+    }, {
+      "id": "aa7e8e58-5b5d-45dd-b8a3-579c6c295da3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sport",
+      "targets": [
+        ["linkText=Sport", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(2) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sport')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Sport']", "xpath:href"],
+        ["xpath=//div[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sport')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7450d220-c9fe-47ef-9c38-1e96152afde0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.main",
+      "targets": [
+        ["css=.main", "css:finder"],
+        ["xpath=//body/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Sortiraj po: \\n        \\ndatumu(rastuce)\\n        datumu(opadajuce)\\n        oceni(rastuce)\\n        oceni(opadajuce)\\n        broju trazenih ljudi(rastuce)\\n        broju trazenih ljudi(opadajuce)\\n     Sortiraj\\n\\n\\nSortirano po datumu, rastuce\\n\\n\\nNema objava za prikaz"
+    }, {
+      "id": "780d1d9d-15b7-47c4-b549-fdb0075a542b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kosarka",
+      "targets": [
+        ["linkText=Kosarka", "linkText"],
+        ["css=ul:nth-child(3) > li:nth-child(1) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Kosarka')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Kosarka']", "xpath:href"],
+        ["xpath=//ul/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kosarka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52f747ba-bb32-4948-b942-9aac61dfd2ca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Fudbal",
+      "targets": [
+        ["linkText=Fudbal", "linkText"],
+        ["css=ul:nth-child(3) > li:nth-child(2) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Fudbal')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Fudbal']", "xpath:href"],
+        ["xpath=//ul/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Fudbal')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e13109f-4b27-45d3-ad56-6ae1025b0a14",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Odbojka",
+      "targets": [
+        ["linkText=Odbojka", "linkText"],
+        ["css=ul:nth-child(3) > li:nth-child(3) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Odbojka')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Odbojka']", "xpath:href"],
+        ["xpath=//ul/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Odbojka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5add75af-b46e-4813-ae2a-6a651208a6ed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Rukomet",
+      "targets": [
+        ["linkText=Rukomet", "linkText"],
+        ["css=ul:nth-child(3) > li:nth-child(4) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Rukomet')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Rukomet']", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Rukomet')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a76106e-b4d6-4177-bfad-81db0b8fbfbf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tenis",
+      "targets": [
+        ["linkText=Tenis", "linkText"],
+        ["css=ul:nth-child(3) > li:nth-child(5) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Tenis')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Tenis']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Tenis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94b2af95-7a6e-453d-b9a7-f353638e9a92",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Stoni tenis",
+      "targets": [
+        ["linkText=Stoni tenis", "linkText"],
+        ["css=li:nth-child(6) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Stoni tenis')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Stoni%20tenis']", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Stoni tenis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93e15a89-aaf4-4607-b1a4-8fd323588f03",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Stoni fudbal",
+      "targets": [
+        ["linkText=Stoni fudbal", "linkText"],
+        ["css=ul:nth-child(3) > li:nth-child(7) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Stoni fudbal')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Stoni%20fudbal']", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Stoni fudbal')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b08bb63-8fc0-4173-9e23-d2e9df8deddb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ragbi",
+      "targets": [
+        ["linkText=Ragbi", "linkText"],
+        ["css=ul:nth-child(3) > li:nth-child(8) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Ragbi')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Ragbi']", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ragbi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f8995bf-0a88-40c1-a9d4-0c7fbb4ff619",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pecanje",
+      "targets": [
+        ["linkText=Pecanje", "linkText"],
+        ["css=ul:nth-child(3) > li:nth-child(9) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Pecanje')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Pecanje']", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pecanje')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1108f73-d7eb-49ab-b9b7-347bcf83634d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sah",
+      "targets": [
+        ["linkText=Sah", "linkText"],
+        ["css=li:nth-child(10) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sah')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Sah']", "xpath:href"],
+        ["xpath=//li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sah')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95ac8fd7-f0fc-41bf-bd1e-5c7d37c800eb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ples",
+      "targets": [
+        ["linkText=Ples", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(4) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Ples')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Ples']", "xpath:href"],
+        ["xpath=//div[2]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ples')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "638157ac-0a36-4141-9132-788d0012b700",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kultura",
+      "targets": [
+        ["linkText=Kultura", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(5) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Kultura')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Kultura']", "xpath:href"],
+        ["xpath=//div[2]/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kultura')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4171f79d-b6c7-45a6-9501-ab6ae545c4c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Bioskop",
+      "targets": [
+        ["linkText=Bioskop", "linkText"],
+        ["css=ul:nth-child(6) > li:nth-child(1) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Bioskop')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Bioskop']", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Bioskop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de70fecf-5853-4108-b6dc-8efadd85b007",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pozoriste",
+      "targets": [
+        ["linkText=Pozoriste", "linkText"],
+        ["css=ul:nth-child(6) > li:nth-child(2) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Pozoriste')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Pozoriste']", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pozoriste')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a01fcec6-679c-4984-9cb7-0f5c7cfb6a69",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Opera",
+      "targets": [
+        ["linkText=Opera", "linkText"],
+        ["css=ul:nth-child(6) > li:nth-child(3) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Opera')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Opera']", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Opera')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa59ac6f-2f2f-419e-a559-a96879322eed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Balet",
+      "targets": [
+        ["linkText=Balet", "linkText"],
+        ["css=ul:nth-child(6) > li:nth-child(4) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Balet')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Balet']", "xpath:href"],
+        ["xpath=//ul[2]/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Balet')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b338b7aa-f2db-4b49-8499-9ec03ce4d3e1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Koncerti",
+      "targets": [
+        ["linkText=Koncerti", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(7) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Koncerti')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Koncerti']", "xpath:href"],
+        ["xpath=//div[2]/ul/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Koncerti')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48b269fb-fac6-4a24-b911-b56a2a95cdf6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Gejming",
+      "targets": [
+        ["linkText=Gejming", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(8) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Gejming')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Gejming']", "xpath:href"],
+        ["xpath=//div[2]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gejming')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "349fc1c3-019e-4699-b7c1-c397be598982",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Izlasci",
+      "targets": [
+        ["linkText=Izlasci", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(9) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Izlasci')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Izlasci']", "xpath:href"],
+        ["xpath=//div[2]/ul/li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Izlasci')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6477e3a-60cb-4411-96f7-0e0fe3d34e5f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'NAJJACA OBJAVA IKAD')]", "xpath:innerText"]
+      ],
+      "value": "NAJJACA OBJAVA IKAD"
+    }, {
+      "id": "407d2e54-c746-408f-8ce5-ffc5dd31ee24",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kafane",
+      "targets": [
+        ["linkText=Kafane", "linkText"],
+        ["css=ul:nth-child(10) > li:nth-child(1) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Kafane')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Kafane']", "xpath:href"],
+        ["xpath=//ul[3]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kafane')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fd56d32-0ec5-4e78-bb7d-887918e1152f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Splavovi",
+      "targets": [
+        ["linkText=Splavovi", "linkText"],
+        ["css=ul:nth-child(10) > li:nth-child(2) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Splavovi')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Splavovi']", "xpath:href"],
+        ["xpath=//ul[3]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Splavovi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dba10d7-5aef-43bd-af95-4fa584598228",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Klubovi",
+      "targets": [
+        ["linkText=Klubovi", "linkText"],
+        ["css=ul:nth-child(10) > li:nth-child(3) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Klubovi')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Klubovi']", "xpath:href"],
+        ["xpath=//ul[3]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Klubovi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0387e4ba-ccfc-44ea-a99f-cffcf787c0ae",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Rejv",
+      "targets": [
+        ["linkText=Rejv", "linkText"],
+        ["css=ul:nth-child(10) > li:nth-child(4) > .a-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Rejv')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/Gost/pretraga/Rejv']", "xpath:href"],
+        ["xpath=//ul[3]/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Rejv')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7ec4e59-f82b-4441-b9c4-bff59abf7578",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'NAJJACA OBJAVA IKAD')]", "xpath:innerText"]
+      ],
+      "value": "NAJJACA OBJAVA IKAD"
+    }]
+  }, {
+    "id": "35f03593-7914-42ab-bceb-59c7dd9bf7be",
+    "name": "Podrska bez teme podrske (ulogovani korisnik)",
+    "commands": [{
+      "id": "769a0e26-7684-4623-8304-a7176cb204ed",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72e13c4e-85fc-4165-b914-a07fc819ebf1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3b6a1f7-adb6-48d7-9ca1-258870e63a92",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Podrska",
+      "targets": [
+        ["linkText=Podrska", "linkText"],
+        ["css=#podrska > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Podrska')]", "xpath:link"],
+        ["xpath=//li[@id='podrska']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/podrska']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Podrska')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d29752c9-04b3-42a2-9f69-95e85fbc8e00",
+      "comment": "",
+      "command": "click",
+      "target": "id=porukaPodrska",
+      "targets": [
+        ["id=porukaPodrska", "id"],
+        ["name=porukaPodrska", "name"],
+        ["css=#porukaPodrska", "css:finder"],
+        ["xpath=//textarea[@id='porukaPodrska']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42a56a8d-fe5f-462a-9625-ff054e745f33",
+      "comment": "",
+      "command": "type",
+      "target": "id=porukaPodrska",
+      "targets": [
+        ["id=porukaPodrska", "id"],
+        ["name=porukaPodrska", "name"],
+        ["css=#porukaPodrska", "css:finder"],
+        ["xpath=//textarea[@id='porukaPodrska']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Imam problem, previse ljudi zeli da dodje na moju zurku."
+    }, {
+      "id": "c959df6b-c0a4-40a7-b529-25b41326fe65",
+      "comment": "",
+      "command": "click",
+      "target": "id=temaPodrska",
+      "targets": [
+        ["id=temaPodrska", "id"],
+        ["name=temaPodrska", "name"],
+        ["css=#temaPodrska", "css:finder"],
+        ["xpath=//input[@id='temaPodrska']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04dcd64a-469f-4223-872d-77fcaf7cb20a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(11)",
+      "targets": [
+        ["css=.btn:nth-child(11)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Posalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b8dc51f3-5638-4fab-a880-33198d536d96",
+    "name": "Podrska bez opisa problema (ulogovani korisnik)",
+    "commands": [{
+      "id": "73f00082-c2f7-42bb-9d44-9d7f5954538f",
+      "comment": "",
+      "command": "open",
+      "target": "/Korisnik",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d29edbd5-d4b2-490e-a0d9-d15631cc83a4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51d783e9-246f-4f38-a6f4-eab69ffd4519",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Podrska",
+      "targets": [
+        ["linkText=Podrska", "linkText"],
+        ["css=#podrska > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Podrska')]", "xpath:link"],
+        ["xpath=//li[@id='podrska']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8080/Korisnik/podrska']", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Podrska')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46ff22bf-f499-4006-b167-db1c0441dfce",
+      "comment": "",
+      "command": "click",
+      "target": "id=temaPodrska",
+      "targets": [
+        ["id=temaPodrska", "id"],
+        ["name=temaPodrska", "name"],
+        ["css=#temaPodrska", "css:finder"],
+        ["xpath=//input[@id='temaPodrska']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0154184a-a15b-4406-a504-8ca8afc8bcbb",
+      "comment": "",
+      "command": "type",
+      "target": "id=temaPodrska",
+      "targets": [
+        ["id=temaPodrska", "id"],
+        ["name=temaPodrska", "name"],
+        ["css=#temaPodrska", "css:finder"],
+        ["xpath=//input[@id='temaPodrska']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Problem sa objavama"
+    }, {
+      "id": "21cbcd87-4c54-4a50-82e4-16d4844e1f38",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(11)",
+      "targets": [
+        ["css=.btn:nth-child(11)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Posalji')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "781b2fc4-adcc-42bf-a86b-c78c1e13a7b1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
