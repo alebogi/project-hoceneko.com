@@ -32,7 +32,7 @@ if(isset($poruka)) {
 else{
     echo "Sortirano po datumu, rastuce <br><br><br>";
 }
-if(isset($obavestenje))
+if(empty($objave) && isset($obavestenje))
     echo $obavestenje;
 ?>
 
