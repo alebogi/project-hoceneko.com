@@ -126,7 +126,7 @@ class Admin extends BaseController
         if(!$this->validate([
             'naziv' => 'required|min_length[5]|max_length[20]',
             'kategorija' => 'required',
-            'broj_potrebnih_clanova' => 'required',
+            'broj_potrebnih_clanova' => 'required|is_natural',
             'datum' => 'required',
             'vreme' => 'required',
             'mesto' => 'required|max_length[20]',
